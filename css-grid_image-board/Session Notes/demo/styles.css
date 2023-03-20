@@ -1,0 +1,98 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    background-color: white;
+    line-height: 1.4;
+}
+
+.logo {
+    max-width: 1000px;
+    padding: 2rem 0 0 2rem;
+    margin: auto;
+}
+
+.bootcamp-grid {
+    max-width: 1000px;
+    padding: 2rem;
+    margin: auto;
+    color: white;
+}
+
+.bootcamp {
+    padding: 1.4rem;
+    background-color: #2e016d;
+    border-radius: 5px;
+}
+
+.bootcamp--1 {
+    background-color: #ffadb9;
+}
+
+.bootcamp--1 .bootcamp__headline,
+.bootcamp--3 .bootcamp__headline,
+.bootcamp--5 .bootcamp__headline {
+    color: #3f0097;
+}
+
+.bootcamp--3,
+.bootcamp--5 {
+    background-color: #e4e8f0;
+    color: #2e016d;
+}
+
+.bootcamp__headline {
+    margin: 0 0 1rem 0;
+    color: #ffadb9;
+}
+
+.bootcamp-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+        "web web ux da"
+        "ds wdg wdg da";
+    grid-auto-columns: 200px;
+    grid-auto-rows: 400px;
+    /* grid-template-columns: repeat(4, 1fr); */
+}
+
+.bootcamp--1 {
+    grid-area: web;
+}
+.bootcamp--2 {
+    grid-area: ux;
+}
+.bootcamp--3 {
+    grid-area: ds;
+}
+.bootcamp--4 {
+    grid-area: wdg;
+}
+.bootcamp--5 {
+    grid-area: da;
+}
+
+.bootcamp--1,
+.bootcamp--4 {
+    /* grid-column: span 2; */
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+}
+
+.bootcamp--5 {
+    /* grid-column-start: 4; */
+    /* grid-row-start: 1;
+    grid-row-end: span 2; */
+    /* same as writing */
+    /* grid-row: 1 / span 2;
+    */
+}
