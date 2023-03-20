@@ -1,0 +1,23 @@
+* {
+  border-size: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: papayawhip;
+}
+
+body {
+  display: grid;
+  border: 2px solid black;
+  border-width: thick;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+header {
+  margin: 10px;
+  text-align: center;
+}
