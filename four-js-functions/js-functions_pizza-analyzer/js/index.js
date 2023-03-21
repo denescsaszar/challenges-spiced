@@ -38,7 +38,7 @@ Let's update the background of the output display to indicate whether we gain or
 
    > 💡 `var(--<variable-name>)` is how you can use predefined variables in CSS. In this case, both color codes are stored in the variables `--red` and `--green` on the `:root` element of the HTML document (have a look into the CSS file!).
 
-*/
+   */
 
 const pizzaInput1 = document.querySelector('[data-js="pizza-input-1"]');
 const pizza1 = document.querySelector('[data-js="pizza-1"]');
@@ -48,17 +48,37 @@ const outputSection = document.querySelector('[data-js="output-section"]');
 
 const output = document.querySelector('[data-js="output"]');
 
+let pizzasize1 = 24;
+let pizzasize2 = 24;
+
+// !!!COMMENT: I COULD NOT FINISH THIS TASK AND COPIED CODE
+// FROM THE SOLUTION. I WILL TRY TO UNDERSTAND IT AND
+// REWRITE IT MYSELF.
+
 pizzaInput1.addEventListener("input", () => {
-  console.log("pizzaInput1");
+  pizzasize1 = pizzaInput1.value;
+  console.log(pizzasize1);
+  calculatePizzaGain(pizzasize1, pizzasize2),
+    updatePizzaDisplay(pizza1, pizzasize1),
+    updatePizzaDisplay(pizza2, pizzasize2),
+    updateOutputColor(pizzasize1, pizzasize2);
 });
 
 pizzaInput2.addEventListener("input", () => {
-  console.log("pizzaInput2");
+  pizzasize2 = pizzaInput2.value;
+  console.log(pizzasize2);
+  calculatePizzaGain(pizzasize1, pizzasize2),
+    updatePizzaDisplay(pizza1, pizzasize1),
+    updatePizzaDisplay(pizza2, pizzasize2),
+    updateOutputColor(pizzasize1, pizzasize2);
 });
 
 // Task 1
 
+// Task 1
+
 function calculatePizzaGain(diameter1, diameter2) {
+  console.log(Math.PI);
   console.log("calculatePizzaGain");
   console.log(diameter1, diameter2);
   console.log(Math.PI(diameter1 / 2));
@@ -72,30 +92,29 @@ function calculatePizzaGain(diameter1, diameter2) {
   console.log(
     ((Math.PI(diameter2 / 2) * Math.PI(diameter2 / 2) -
       Math.PI(diameter1 / 2) * Math.PI(diameter1 / 2)) /
-      Math.PI(diameter1 / 2)) *
-      Math.PI(diameter1 / 2) *
+      (Math.PI(diameter1 / 2) * Math.PI(diameter1 / 2))) *
       100
   );
   output.textContent = Math.round(
     ((Math.PI(diameter2 / 2) * Math.PI(diameter2 / 2) -
       Math.PI(diameter1 / 2) * Math.PI(diameter1 / 2)) /
-      Math.PI(diameter1 / 2)) *
-      Math.PI(diameter1 / 2) *
+      (Math.PI(diameter1 / 2) * Math.PI(diameter1 / 2))) *
       100
   );
 }
 
-calculatePizzaGain();
-console.log(calculatePizzaGain);
-
 // Task 2
 
 function updatePizzaDisplay(pizzaElement, newSize) {
-  // write your code here
+  pizzaElement.style.width = (newSize / 24) * 100 + "px";
 }
 
 // Task 3
 
 function updateOutputColor(size1, size2) {
-  // write your code here
+  if (size1 > size2) {
+    outputSection.style.backgroundColor = "var(--red)";
+  } else {
+    outputSection.style.backgroundColor = "var(--green)";
+  }
 }
