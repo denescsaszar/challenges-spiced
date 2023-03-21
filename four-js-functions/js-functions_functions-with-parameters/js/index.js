@@ -13,6 +13,8 @@ function logText() {
   console.log("This text does not appear. Why?");
 }
 
+logText();
+
 console.log("-------------");
 console.log("Exercise 2:");
 /*
@@ -37,16 +39,30 @@ greetMary();
 
 // --v-- write your code here --v--
 
-function greet() {}
+function greet() {
+  console.log("Welcome Bob, good to see you again!");
+  console.log("Welcome Alice, good to see you again!");
+  console.log("Welcome Mary, good to see you again!");
+}
+
+greet();
 
 // --^-- write your code here --^--
 
-console.log("-------------");
-console.log("3:");
+// console.log("-------------");
+// console.log("3:");
 /*
 3: We log a little separation text for each subtask. This is repetitive code, so lets write a function 'logSeparator' which takes the number of the exercise as an input parameter and logs the respective separator. then use this function to replace the existing separator logs in this javascript file.
 */
 
 // --v-- write your code here --v--
+
+function logSeparator(exerciseNumber) {
+  console.log("-------------");
+  console.log("Exercise " + exerciseNumber + ":");
+}
+
+logSeparator("3");
+// logSeparator("4");
 
 // --^-- write your code here --^--
