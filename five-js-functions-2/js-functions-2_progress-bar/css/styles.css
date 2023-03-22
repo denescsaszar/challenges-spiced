@@ -46,6 +46,7 @@ ul {
 }
 
 .progress-bar {
+  width: 0;
   position: absolute;
   bottom: 0;
   left: 0;
