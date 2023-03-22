@@ -42,6 +42,15 @@ function calculateScrollPercentage() {
   );
 }
 
+function canculatescrollPercentage() {
+const yPosition = window.scrollY;
+const viewportHeight = document.body.clientHeight;
+const document.body.clientHeight = window.innerHeight;
+const scrollableHeight = document.body.clientHeight - window.innerHeight;
+const percentage = (window.scrollY / (document.body.clientHeight - window.innerHeight)) * 100;
+return percentage;
+}
+
 /*
 This JavaScript code adds a "scroll" event listener to the document object, which means that the function inside the arrow function () => { ... } will be executed every time the user scrolls the webpage.
 
@@ -57,3 +66,10 @@ So, in summary, the code updates a progress bar's width whenever the user scroll
 document.addEventListener("scroll", () => {
   progressBar.style.width = `${calculateScrollPercentage()}%`;
 });
+
+// document.addEventListener("scroll", () => {
+//   console.log("scrolling");
+//   const percantage = calculateScrollPercentage();
+//   console.log(percentage);
+//   progressBar.style.width = percentage;
+// });
