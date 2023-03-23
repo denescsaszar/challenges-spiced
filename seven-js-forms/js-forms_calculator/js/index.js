@@ -36,9 +36,29 @@ function divide(a, b) {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
+  // --v-- write your code here --v--
+
+  const a = parseInt(form.numberA.value);
+  const b = parseInt(form.numberB.value);
+  const sum = form.addition.checked;
+  const sub = form.subtraction.checked;
+  const mul = form.multiplication.checked;
+  const div = form.division.checked;
+
+  console.log(a, b);
+
   let result;
 
-  // --v-- write your code here --v--
+  if (sum === true) {
+    result = add(a, b);
+    console.log(add(a, b));
+  } else if (sub === true) {
+    result = subtract(a, b);
+  } else if (mul === true) {
+    result = multiply(a, b);
+  } else {
+    result = divide(a, b);
+  }
 
   // --^-- write your code here --^--
 
