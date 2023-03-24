@@ -54,3 +54,5 @@ const secondButton = document.querySelector('body > article:nth-child(4) > foote
 secondButton.addEventListener("click", () => {
   console.log("click");
 }
+
+// the end
