@@ -19,14 +19,13 @@ const clearButton = document.querySelector('[data-js="clear-button"]');
 // should be emptied. Afterwards you should still be able to add new toast messages
 // and clear them again.
 
-addButton.addEventListener("click", (event) => {
+addButton.addEventListener("click", () => {
   // Exercise: Append a new entry to the toast messages container
-  const listElement = document.createElement("li");
-
-  toastContainer.append(listElement);
-
-  listElement.classList.add("toast-container__message");
-  listElement.textContent = "I am a new message!";
+  // no need for default because it is just a button
+  const toast = document.createElement("li");
+  toast.classList.add("toast");
+  toast.textContent = "This is a toast message";
+  toastContainer.appendChild(toast);
 });
 
 clearButton.addEventListener("click", (event) => {
