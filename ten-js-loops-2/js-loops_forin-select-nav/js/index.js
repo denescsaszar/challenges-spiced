@@ -64,12 +64,11 @@ main.append(select);
 
 // --v-- write/change code here --v--
 
-for (key in languages) {
-  console.log(languages[key]);
-  const option = document.createElement("option");
-  option.value = key;
-  option.textContent = languages[key];
+for (let language in languages) {
+  let option = document.createElement("option");
+  option.value = languages[language];
   select.append(option);
+  option.textContent = languages[language];
 }
 
 // --^-- write/change code here --^--
@@ -89,13 +88,15 @@ navElement.append(ul);
 
 // --v-- write/change code here --v--
 
-for (key in nav) {
-  const li = document.createElement("li");
-  const a = document.createElement("a");
-  a.href = nav[key].href;
-  a.textContent = nav[key].text;
-  li.append(a);
-  ul.append(li);
+for (let key in nav) {
+  const list = document.createElement("li");
+  const link = document.createElement("a");
+  const elements = nav[key];
+  console.log("elements", elements["href"]);
+  link.href = elemtns["href"];
+  link.textContent = elements.text;
+  list.append(link);
+  ul.append(list);
 }
 
 // --^-- write/change code here --^--

@@ -53,25 +53,32 @@ console.clear();
 
 const starContainer = document.querySelector('[data-js="star-container"]');
 
-function renderStars() {
+function renderStars(filledStars = 0) {
   // reset the star container before rerendering stars
   starContainer.innerHTML = "";
 
   //--v-- your code here --v--
 
-  for (let i = 1; i <= 5; i++) {
-    const star = document.createElement("img");
-    star.src = "assets/star-empty.svg";
-    starContainer.appendChild(star);
+  for (let i = 1; i < 6; i++) }
+    const emptyStar = document.createElement("img");
+   if (filledStars > i) {
+    emptyStar.setAttribute('src', "assets/star-empty.svg");
+    } else {
+      emptyStar.setAttribute('src', "assets/star.svg");
+    }
+    emptyStar.addEventListener("click", function() {
+      // console.log('cloicked on a start');
+      // console.log(i);
+      renderStars(i);
+    });
+    starContainer.append(emptyStar);
   }
 
-  function filledStarts() {
-    star.src = "assets/star-filled.svg";
-  }
 
-  star.addEventListener("click", filledStarts);
+
+
 
   //--^-- your code here --^--
-}
+
 
 renderStars();
