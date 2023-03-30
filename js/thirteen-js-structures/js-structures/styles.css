@@ -1,0 +1,6 @@
+@import "./styles/globals.css";
+
+@import "./styles/header.css";
+@import "./styles/card.css";
+@import "./styles/footer.css";
+@import "./components/footer.css";
