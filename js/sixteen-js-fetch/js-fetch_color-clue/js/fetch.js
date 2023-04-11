@@ -20,6 +20,8 @@ export async function fetchNewColor() {
 
   // --v-- your code here --v--
 
+  // console.log(colorApiUrl);
+
   try {
     const response = await fetch(colorApiUrl);
     if (!response.ok) {
