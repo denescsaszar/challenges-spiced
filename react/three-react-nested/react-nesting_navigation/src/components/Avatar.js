@@ -2,7 +2,7 @@ import React from "react";
 import Image from "./Image";
 import avatar from "../img/avatar.jpg";
 
-function Avatar() {
+export function Avatar() {
   return (
     <button
       type="button"
@@ -13,5 +13,3 @@ function Avatar() {
     </button>
   );
 }
-
-export default Avatar;

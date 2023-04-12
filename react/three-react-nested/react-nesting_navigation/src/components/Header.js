@@ -1,10 +1,8 @@
 import React from "react";
 
-function Header({ children }) {
+export function Header({ children }) {
   return <header className="header">{children}</header>;
 }
-
-export default Header;
 
 /*
 1. Header component

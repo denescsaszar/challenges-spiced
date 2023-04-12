@@ -1,10 +1,10 @@
 import "./styles.css";
 
-import Avatar from "./components/Avatar";
-import Header from "./components/Header";
-import Link from "./components/Link";
-import Logo from "./components/Logo";
-import Navigation from "./components/Navigation";
+import { Avatar } from "./components/Avatar";
+import { Header } from "./components/Header";
+import { Link } from "./components/Link";
+import { Logo } from "./components/Logo";
+import { Navigation } from "./components/Navigation";
 
 export default function App() {
   return (
