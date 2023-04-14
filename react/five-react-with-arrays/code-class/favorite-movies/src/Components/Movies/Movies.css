@@ -1,0 +1,14 @@
+.movies {
+    /* background-color: var(--color-highlight); */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.movies__title {
+    font-size: 48px;
+    padding-top: 20px;
+    font-weight: normal;
+    text-align: center;
+    color: var(--blue);
+}
